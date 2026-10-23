@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mawiyah Noor | Portfolio</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+
+
+    <!-- Navigation Bar -->
+    <header>
+        <a href="#home" class="logo">MN<span>.</span></a>
+
+        <nav>
+            
+<button id="theme-toggle" aria-label="Switch to light mode">
+  ☀️ Light Mode
+</button>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="subtitle">
+                ECE STUDENT • FUTURE ENGINEER
+            </p>
+
+            <h1>
+                Turning ideas into
+                <span>meaningful technology.</span>
+            </h1>
+
+            <p class="description">
+                Hello, I'm Mawiyah Noor.
+                I love exploring electronics,
+                programming, IoT, and creative technology.
+                Welcome to my digital space.
+            </p>
+
+            <a href="#projects" class="btn">
+                Explore My Work ↗
+            </a>
+
+        </div>
+
+        <!-- Decorative Design -->
+        <div class="hero-art">
+
+            <div class="circle">
+                <div class="inner-circle">MN</div>
+            </div>
+
+            <p>CREATIVE MIND. TECHNICAL HEART.</p>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+
+        <p class="subtitle">GET TO KNOW ME</p>
+
+        <h2>About <span>Me</span></h2>
+
+        <div class="about-card">
+
+            <p>
+                I am a second-year Electronics and
+                Communication Engineering student
+                passionate about learning new technologies
+                and developing practical solutions.
+
+                I am currently building my skills in
+                C programming, electronics, and
+                the Internet of Things.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+
+        <p class="subtitle">WHAT I AM LEARNING</p>
+
+        <h2>My <span>Skills</span></h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="icon">⌘</div>
+                <h3>C Programming</h3>
+                <p>Learning programming fundamentals and logic.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">◈</div>
+                <h3>Electronics</h3>
+                <p>Exploring electronic components and circuits.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">◎</div>
+                <h3>IoT</h3>
+                <p>Discovering connected devices and smart systems.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">✧</div>
+                <h3>Web Development</h3>
+                <p>Building webpages using HTML and CSS.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+
+        <p class="subtitle">WHAT I AM CREATING</p>
+
+        <h2>Featured <span>Projects</span></h2>
+
+        <div class="grid">
+
+            <div class="card project-card">
+
+                <p class="project-number">01 / PROJECT</p>
+
+                <h3>Smart Hospital</h3>
+
+                <p>
+                    A concept exploring how technology
+                    can improve patient care and
+                    hospital systems.
+                </p>
+
+                <span class="tag">Healthcare Technology</span>
+
+            </div>
+
+            <div class="card project-card">
+
+                <p class="project-number">02 / PROJECT</p>
+
+                <h3>ECE Explorer</h3>
+
+                <p>
+                    An educational website idea for
+                    learning electronics and basic circuits.
+                </p>
+
+                <span class="tag">Web Development</span>
+
+            </div>
+
+            <div class="card project-card">
+
+                <p class="project-number">03 / PROJECT</p>
+
+                <h3>IoT Concepts</h3>
+
+                <p>
+                    Exploring ideas for connecting
+                    electronic devices to create useful
+                    smart applications.
+                </p>
+
+                <span class="tag">Internet of Things</span>
+
+            </div>
+            <div class="card project-card">
+
+                <p class="project-number">03 / PROJECT</p>
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A personal portfolio website showcasing
+                    my skills, projects, and interests.
+                    using HTML, CSS, and JavaScript
+    
+                .
+                </p>
+
+                <span class="tag">Internet of Things</span>
+
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+
+        <p class="subtitle">LET'S CONNECT</p>
+
+        <h2>
+            Have an idea?
+            <span>Let's talk.</span>
+        </h2>
+
+        <p>
+            I am eager to learn, collaborate,
+            and explore new opportunities.
+        </p>
+
+        <a href="mailto:mawiyahnoor08@gmail.com" class="btn">
+            Contact Me ↗
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <a href="#home" class="logo">MN<span>.</span></a>
+
+        <p>Designed with curiosity & a love for technology.</p>
+
+        <p class="copyright">© 2026 Mawiyah Noor</p>
+
+    </footer>
+    
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("theme-toggle");
+
+    if (!themeToggle) {
+        console.error("Theme toggle button not found!");
+        return;
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+    }
+
+    function updateButton() {
+        const isLight = document.body.classList.contains("light-mode");
+        themeToggle.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
+    }
+
+    updateButton();
+
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("light-mode");
+
+        const theme = document.body.classList.contains("light-mode")
+            ? "light"
+            : "dark";
+
+        localStorage.setItem("portfolio-theme", theme);
+        updateButton();
+    });
+});
+</script>
+</body>
+</html>
+
+
+ 

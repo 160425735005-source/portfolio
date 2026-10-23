@@ -1,0 +1,359 @@
+
+css
+:root {
+    --black: #0B0B0F;
+    --charcoal: #17171F;
+    --gold: #D6B875;
+    --ivory: #F5F1E8;
+    --muted: #A6A4AD;
+    --border-color: #30303A;
+    --header-bg: rgba(11, 11, 15, 0.95);
+    --hero-glow: #292218;
+    --contact-bg: #211B12;
+}
+
+body.light-mode {
+    --black: #F5F1E8;
+    --charcoal: #FFFFFF;
+    --gold: #927020;
+    --ivory: #17171F;
+    --muted: #625F68;
+    --border-color: #DED8CA;
+    --header-bg: rgba(245, 241, 232, 0.95);
+    --hero-glow: #E9DFC9;
+    --contact-bg: #EAE0CD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--ivory);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    color: var(--gold);
+}
+
+.subtitle {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+#theme-toggle {
+    background: var(--charcoal);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 10px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: radial-gradient(
+        circle at 80% 40%,
+        var(--hero-glow) 0%,
+        var(--black) 40%
+    );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+h1 {
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.description {
+    color: var(--muted);
+    max-width: 530px;
+    margin-bottom: 32px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 1px solid var(--gold);
+    background: var(--gold);
+    color: var(--black);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.hero-art {
+    text-align: center;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.circle {
+    width: 260px;
+    height: 260px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 50px #D6B87515;
+    margin-bottom: 25px;
+}
+
+.inner-circle {
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 65px;
+    font-family: Georgia, serif;
+    color: var(--gold);
+}
+
+.section {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 40px;
+}
+
+.about-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    background: var(--charcoal);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    text-align: left;
+}
+
+.card,
+.project-card,
+.skill-card {
+    background: var(--charcoal);
+    color: var(--ivory);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover,
+.project-card:hover,
+.skill-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px #00000025;
+}
+
+.icon {
+    color: var(--gold);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3,
+.project-card h3,
+.skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p,
+.project-card p,
+.skill-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.project-number {
+    color: var(--gold) !important;
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.contact {
+    background: linear-gradient(
+        180deg,
+        var(--black),
+        var(--contact-bg)
+    );
+}
+
+.contact > p:not(.subtitle) {
+    color: var(--muted);
+    margin: 0 auto 25px;
+    max-width: 550px;
+}
+
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: var(--black);
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.copyright {
+    color: var(--gold);
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .circle {
+        width: 210px;
+        height: 210px;
+    }
+
+    .inner-circle {
+        width: 160px;
+        height: 160px;
+        font-size: 50px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
